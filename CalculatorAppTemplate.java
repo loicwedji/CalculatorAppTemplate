@@ -208,8 +208,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double multiply(double a, double b) {
-        // TODO
-        return 0;
+        return a*b;
     }
 
     private double divide(double a, double b) {

@@ -221,8 +221,24 @@ public class CalculatorAppTemplate extends JFrame {
         double result = 0;
         int exponent = (int) b;
 
+<<<<<<< HEAD
         if (exponent == 0)
             return 1;
+=======
+        if(a == 0)return 0;
+
+        if(exponent == 0)return 1;
+>>>>>>> 29ad90d (Negative powers)
+
+        if(exponent < 0){
+            exponent = -exponent;
+
+            for (int i = 1; i <= exponent; i++) {
+                result = a * a;
+            }
+
+            return 1/result;
+        }
 
         for (int i = 1; i <= exponent; i++) {
             result = a * a;

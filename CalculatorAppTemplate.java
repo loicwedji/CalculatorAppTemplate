@@ -224,8 +224,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double modulus(double a, double b) {
-        // TODO
-        return 0;
+        return a % b;
     }
 
     private double average(double a, double b) {

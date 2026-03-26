@@ -229,12 +229,13 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double average(double a, double b) {
-        // TODO
-        return 0;
+        return (a + b)/2;
+        
     }
 
     private double squareRoot(double a) {
-        return Math.sqrt(a);
+        
+        return 0;
     }
 
     private long factorial(int n) {

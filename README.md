@@ -1,0 +1,1 @@
+# AppleCare is a scam!

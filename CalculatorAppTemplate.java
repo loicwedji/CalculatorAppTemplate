@@ -1,7 +1,7 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
+import javax.swing.*;
 
 public class CalculatorAppTemplate extends JFrame {
 
@@ -228,8 +228,8 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double average(double a, double b) {
-        // TODO
-        return 0;
+        return (a + b)/2;
+        
     }
 
     private double squareRoot(double a) {

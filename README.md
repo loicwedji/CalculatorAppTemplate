@@ -1,6 +1,1 @@
-# AppleCare is a Scam
-
-Loic snores when he sleeps.
-
-Loic's going bald (and he sucks at smash)
-
+This is the first change in the repo

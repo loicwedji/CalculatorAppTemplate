@@ -219,8 +219,15 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double power(double a, double b) {
-        // TODO
-        return 0;
+        double result=0;
+        int exponent = (int) b;
+
+        if(exponent == 0)return 1;
+
+        for (int i = 1; i <= exponent; i++) {
+            result = a * a;
+        }
+        return result;
     }
 
     private double modulus(double a, double b) {

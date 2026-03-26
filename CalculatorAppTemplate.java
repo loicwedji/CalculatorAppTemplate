@@ -214,15 +214,15 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double divide(double a, double b) {
-        // TODO
-        return 0;
+        return a / b;
     }
 
     private double power(double a, double b) {
-        double result=0;
+        double result = 0;
         int exponent = (int) b;
 
-        if(exponent == 0)return 1;
+        if (exponent == 0)
+            return 1;
 
         for (int i = 1; i <= exponent; i++) {
             result = a * a;
@@ -235,8 +235,8 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double average(double a, double b) {
-        return (a + b)/2;
-        
+        return (a + b) / 2;
+
     }
 
     private double squareRoot(double a) {
@@ -250,7 +250,7 @@ public class CalculatorAppTemplate extends JFrame {
 
     // Memory/history method
     private void updateMemory(String equation, double result) {
-     String fullEntry = equation + " = " + result;
+        String fullEntry = equation + " = " + result;
 
         if (historyIndex < equationHistory.size() - 1) {
             equationHistory = new ArrayList<>(equationHistory.subList(0, historyIndex + 1));
@@ -263,7 +263,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private void goBackInMemory() {
-          if (equationHistory.isEmpty()) {
+        if (equationHistory.isEmpty()) {
             resultLabel.setText("Result: No history available.");
             return;
         }
@@ -276,7 +276,7 @@ public class CalculatorAppTemplate extends JFrame {
         }
     }
 
-private void refreshHistoryDisplay() {
+    private void refreshHistoryDisplay() {
         if (historyIndex >= 0 && historyIndex < equationHistory.size()) {
             currentEquationLabel.setText("Current: " + equationHistory.get(historyIndex));
 
@@ -293,6 +293,7 @@ private void refreshHistoryDisplay() {
             }
         }
     }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             CalculatorAppTemplate app = new CalculatorAppTemplate();

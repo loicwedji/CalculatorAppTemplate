@@ -233,8 +233,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double squareRoot(double a) {
-        // TODO
-        return 0;
+        return Math.sqrt(a);
     }
 
     private long factorial(int n) {

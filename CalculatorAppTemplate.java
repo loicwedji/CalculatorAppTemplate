@@ -1,7 +1,7 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
+import javax.swing.*;
 
 public class CalculatorAppTemplate extends JFrame {
 
@@ -234,8 +234,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double squareRoot(double a) {
-        // TODO
-        return 0;
+        return Math.sqrt(a);
     }
 
     private long factorial(int n) {

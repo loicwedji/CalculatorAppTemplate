@@ -244,22 +244,49 @@ public class CalculatorAppTemplate extends JFrame {
 
     // Memory/history method
     private void updateMemory(String equation, double result) {
-        // TODO:
-        // 1. Add the equation + result to equationHistory
-        // 2. Update historyIndex
-        // 3. Refresh the previous/current labels
+     String fullEntry = equation + " = " + result;
+
+        if (historyIndex < equationHistory.size() - 1) {
+            equationHistory = new ArrayList<>(equationHistory.subList(0, historyIndex + 1));
+        }
+
+        equationHistory.add(fullEntry);
+        historyIndex = equationHistory.size() - 1;
+
+        refreshHistoryDisplay();
     }
 
     private void goBackInMemory() {
-        // TODO:
-        // Move backward in equationHistory if possible
-        // Then update the display labels
+          if (equationHistory.isEmpty()) {
+            resultLabel.setText("Result: No history available.");
+            return;
+        }
+
+        if (historyIndex > 0) {
+            historyIndex--;
+            refreshHistoryDisplay();
+        } else {
+            resultLabel.setText("Result: Already at oldest saved equation.");
+        }
     }
 
-    // -----------------------------
-    // Helper Methods
-    // -----------------------------
+private void refreshHistoryDisplay() {
+        if (historyIndex >= 0 && historyIndex < equationHistory.size()) {
+            currentEquationLabel.setText("Current: " + equationHistory.get(historyIndex));
 
+            if (historyIndex > 0) {
+                previousEquationLabel.setText("Previous: " + equationHistory.get(historyIndex - 1));
+            } else {
+                previousEquationLabel.setText("Previous: ");
+            }
+
+            String currentEntry = equationHistory.get(historyIndex);
+            String[] parts = currentEntry.split(" = ");
+            if (parts.length == 2) {
+                resultLabel.setText("Result: " + parts[1]);
+            }
+        }
+    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             CalculatorAppTemplate app = new CalculatorAppTemplate();

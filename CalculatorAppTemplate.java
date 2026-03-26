@@ -234,7 +234,7 @@ public class CalculatorAppTemplate extends JFrame {
     }
 
     private double squareRoot(double a) {
-        
+        // TODO
         return 0;
     }
 

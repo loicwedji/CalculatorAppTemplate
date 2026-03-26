@@ -2,5 +2,5 @@
 
 Loic snores when he sleeps.
 
-Loic's going bald
+Loic's going bald (and he sucks at smash)
 

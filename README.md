@@ -1,5 +1,7 @@
 Calculator App Workshop
 
+![CSC Club Logo](../logo_black.png)
+
 This repository contains a simple Java Swing calculator app template used
 during a hands-on workshop focused on learning Git, GitHub, and
 collaborative development.
